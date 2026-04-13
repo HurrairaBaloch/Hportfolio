@@ -1,33 +1,20 @@
 import { NextResponse } from "next/server";
-import cloudinary from "@/lib/cloudinary";
 
 export async function POST() {
   try {
-    const timestamp = Math.round(new Date().getTime() / 1000);
-    const folder = "hamza-gaming-portfolio/videos";
-
-    // Generate signature for secure upload
-    const signature = cloudinary.utils.api_sign_request(
-      {
-        timestamp,
-        folder,
-        resource_type: "auto",
-      },
-      process.env.CLOUDINARY_API_SECRET!
-    );
-
+    // Return Cloudinary config for unsigned upload
+    // You'll need to enable unsigned uploads in your Cloudinary dashboard
+    // and create an upload preset
+    
     return NextResponse.json({
       success: true,
-      signature,
-      timestamp,
       cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-      apiKey: process.env.CLOUDINARY_API_KEY,
-      folder,
+      uploadPreset: "hamza_portfolio_unsigned", // We'll create this preset
     });
   } catch (error) {
-    console.error("Signature generation error:", error);
+    console.error("Config error:", error);
     return NextResponse.json(
-      { success: false, error: "Failed to generate signature" },
+      { success: false, error: "Failed to get config" },
       { status: 500 }
     );
   }

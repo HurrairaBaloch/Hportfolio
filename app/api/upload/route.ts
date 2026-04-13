@@ -3,15 +3,6 @@ import { connectDB } from "@/lib/mongodb";
 import Game from "@/models/Game";
 import cloudinary from "@/lib/cloudinary";
 
-// Increase body size limit for this route
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '20mb',
-    },
-  },
-};
-
 export async function POST(req: NextRequest) {
   try {
     await connectDB();

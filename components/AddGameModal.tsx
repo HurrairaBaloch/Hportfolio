@@ -53,27 +53,28 @@ export default function AddGameModal({ onClose, onSuccess }: AddGameModalProps) 
       if (videoFile) {
         setUploadProgress("Uploading video to Cloudinary...");
         
-        // Get signature from our API
-        const sigRes = await fetch("/api/cloudinary-signature", { method: "POST" });
-        const sigData = await sigRes.json();
+        // Get config from our API
+        const configRes = await fetch("/api/cloudinary-signature", { method: "POST" });
+        const configData = await configRes.json();
         
-        if (!sigData.success) throw new Error("Failed to get upload signature");
+        if (!configData.success) throw new Error("Failed to get upload config");
         
-        // Upload directly to Cloudinary
+        // Upload directly to Cloudinary using unsigned upload
         const cloudinaryFormData = new FormData();
         cloudinaryFormData.append("file", videoFile);
-        cloudinaryFormData.append("api_key", sigData.apiKey);
-        cloudinaryFormData.append("timestamp", sigData.timestamp);
-        cloudinaryFormData.append("signature", sigData.signature);
-        cloudinaryFormData.append("folder", sigData.folder);
+        cloudinaryFormData.append("upload_preset", configData.uploadPreset);
+        cloudinaryFormData.append("folder", "hamza-gaming-portfolio/videos");
         
         const cloudinaryRes = await fetch(
-          `https://api.cloudinary.com/v1_1/${sigData.cloudName}/auto/upload`,
+          `https://api.cloudinary.com/v1_1/${configData.cloudName}/upload`,
           { method: "POST", body: cloudinaryFormData }
         );
         
         const cloudinaryData = await cloudinaryRes.json();
-        if (!cloudinaryData.secure_url) throw new Error("Video upload failed");
+        if (!cloudinaryData.secure_url) {
+          console.error("Cloudinary error:", cloudinaryData);
+          throw new Error(cloudinaryData.error?.message || "Video upload failed");
+        }
         
         videoUrl = cloudinaryData.secure_url;
         setUploadProgress("Video uploaded! Saving project...");
