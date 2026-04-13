@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#005b34",
+                        "on-tertiary-container": "#f8f1ff",
+                        "surface-variant": "#262627",
+                        "inverse-surface": "#fcf8f9",
+                        "secondary-container": "#00677f",
+                        "on-secondary": "#004050",
+                        "on-background": "#ffffff",
+                        "surface-tint": "#a1ffc2",
+                        "outline-variant": "#484849",
+                        "inverse-primary": "#006d40",
+                        "on-tertiary-fixed": "#1f0052",
+                        "background": "#0e0e0f",
+                        "tertiary-fixed-dim": "#b190ff",
+                        "outline": "#767576",
+                        "on-tertiary-fixed-variant": "#4700a7",
+                        "on-error-container": "#ffa8a3",
+                        "primary-container": "#00fc9a",
+                        "on-secondary-container": "#eef9ff",
+                        "primary": "#a1ffc2",
+                        "tertiary-fixed": "#bda1ff",
+                        "surface-bright": "#2c2c2d",
+                        "surface-container-low": "#131314",
+                        "on-primary-fixed-variant": "#00653b",
+                        "surface-dim": "#0e0e0f",
+                        "on-tertiary": "#290067",
+                        "on-surface": "#ffffff",
+                        "on-primary": "#00643a",
+                        "surface-container-highest": "#262627",
+                        "primary-fixed-dim": "#00ec90",
+                        "surface-container": "#1a191b",
+                        "primary-fixed": "#00fc9a",
+                        "secondary-dim": "#00c0ea",
+                        "on-surface-variant": "#adaaab",
+                        "tertiary-container": "#7000ff",
+                        "surface-container-high": "#201f21",
+                        "inverse-on-surface": "#565556",
+                        "error-dim": "#d7383b",
+                        "secondary-fixed-dim": "#37d4ff",
+                        "surface": "#0e0e0f",
+                        "error-container": "#9f0519",
+                        "error": "#ff716c",
+                        "on-primary-fixed": "#004627",
+                        "on-secondary-fixed": "#003a48",
+                        "on-secondary-fixed-variant": "#00586d",
+                        "on-error": "#490006",
+                        "surface-container-lowest": "#000000",
+                        "primary-dim": "#00ec90",
+                        "tertiary-dim": "#874cff",
+                        "secondary": "#00cffc",
+                        "secondary-fixed": "#80deff",
+                        "tertiary": "#ac89ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scanlines {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0f]/70 backdrop-blur-xl border-b border-[#a1ffc2]/10 shadow-[0_0_15px_rgba(161,255,194,0.05)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto font-['Space_Grotesk'] tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-[#a1ffc2]">HAMZA.DEV</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-gray-400 hover:text-white transition-colors" href="#work">Work</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#about">About</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#contact">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded font-bold hover:scale-95 active:scale-90 transition-transform">
+                Hire Me
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-screen flex flex-col justify-center items-start px-8 md:px-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="Cinematic wide shot of a futuristic neon city environment with dark shadows, volumetric fog, and vibrant green light beams piercing through." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKhm6pLnA5bQCVbjQqRkNgiYFRNhYMkX_aKfLH94YzrCDoeTYhjsUgL2dgDlChIAnRQVb4w_SiRyw44g368ZUUJwdPoCrVNPfn2PgRbYYEIrPdnsmqHxG6KmzOT1fVLEtcoWe2GdNzQLK1By9S0gPDRg1olrXXm_0ROQ617dGuXGmPma3q2_koTNbav_SBKk2pBrK29BGuBsF1o-cfIRlFy6JPBd1WZYI0t82BpdhoJGdcHRyM4m6w-lvS1SamSEhClGGzvvGbN4_H"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+<div class="absolute inset-0 scanlines opacity-30"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_#a1ffc2]"></span>
+<span class="font-headline text-primary uppercase tracking-[0.3em] text-sm font-bold">Systems &amp; Environment Specialist</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter mb-4 text-on-background">
+                    HAMZA<span class="text-primary">.</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-light max-w-2xl leading-relaxed mb-10">
+                    Architecting immersive digital monoliths through high-performance game engineering and evocative technical art.
+                </p>
+<div class="flex gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 font-headline font-bold rounded-sm hover:bg-primary-container transition-colors" href="#work">INITIATE_WORK</a>
+<a class="border border-outline-variant text-secondary px-8 py-4 font-headline font-bold rounded-sm hover:bg-secondary-container/10 transition-colors" href="#contact">CONTACT_CORE</a>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="text-[10px] font-headline uppercase tracking-widest">Scroll to Deploy</span>
+<span class="material-symbols-outlined animate-bounce">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Work Section (Bento Grid) -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-low" id="work">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<h2 class="font-headline text-5xl font-bold tracking-tighter mb-4 text-white">SELECTED_WORK</h2>
+<p class="text-on-surface-variant font-body max-w-md">Explorations in real-time rendering, procedural generation, and mechanical precision.</p>
+</div>
+<div class="flex gap-4">
+<span class="font-headline text-xs text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">UE5</span>
+<span class="font-headline text-xs text-secondary bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">UNITY</span>
+<span class="font-headline text-xs text-white bg-white/5 px-3 py-1 rounded-full border border-white/10">C++</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Project 1: Large Feature -->
+<div class="md:col-span-8 group cursor-pointer bg-surface-container rounded-sm overflow-hidden border border-outline-variant/10 hover:border-primary/30 transition-all duration-500">
+<div class="relative h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Cyberpunk laboratory interior with glowing liquid tubes, mechanical arms, and high-fidelity texture work in a dark industrial setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc85FOpofQvrmNG0WUzJCY1dWFaAWA58GJbfm4RI--RE2PncZO8CJ9MRaYFEOZ1dkNMysJ3XjszBTGte0PkQ7rFqZhQyxI3w0jyJBEyEe0z8byMMEjqKTWElpBhXfDEnWco12wbxTD_H2Wb_XTnRj4nXzak8yJaInpd1ZUQ_sI3zDQKrrHtAGOv-p9Zgll5ZXv2W47Yt4cZIyL2t7ifqY2PUyVUFki1tMI3aa8JA4B7U-_IpIixQDZDsvJ8xTUeaar_KWRZCLkcUJn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-xs font-headline font-bold text-primary mb-2 block uppercase tracking-widest">Environment Design</span>
+<h3 class="text-3xl font-bold text-white mb-2 font-headline">NEURAL_STATION_04</h3>
+</div>
+</div>
+</div>
+<!-- Project 2: Vertical Small -->
+<div class="md:col-span-4 group cursor-pointer bg-surface-container rounded-sm overflow-hidden border border-outline-variant/10 hover:border-secondary/30 transition-all duration-500">
+<div class="relative h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract digital data visualization with electric blue particles forming complex geometric shapes against a void background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMoj_e9peNoDLJbQjG_61Frb1ZKWY687AAHV-0bT7TlYY3xLefVCA9x9GECUxRJqn-wM9468lAutrxca4UOtoj6t6JT2t8A0lfS5sjny4J6mHWycRMwDFOdb_GN3jgfRIpbGf8-DG6ZeehKh0S4l3WM0_Dssglejjb-A_IMIjOAbzKgoGWbCHaPNxrBGINR0GCKF6ZHZu3cgEDnMjBwXKUSoDzhp0A-fLq93-BacEhA06ur31s-Q36GGZ25QU8gT0b0YjfwbUVMIZI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-xs font-headline font-bold text-secondary mb-2 block uppercase tracking-widest">VFX System</span>
+<h3 class="text-2xl font-bold text-white mb-2 font-headline">KINETIC_FLUX</h3>
+</div>
+</div>
+</div>
+<!-- Project 3: Horizontal Small -->
+<div class="md:col-span-6 group cursor-pointer bg-surface-container rounded-sm overflow-hidden border border-outline-variant/10 hover:border-primary/30 transition-all duration-500">
+<div class="relative h-[300px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a sci-fi mechanical weapon model with intricate plating, glowing green power cores, and realistic metallic wear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX25hZAlBp4tv3H7aO6jaOFr0sRtVypwAe_2lCIRodca4VrgTNdPoLdoXkKo8Q7N_A-JWRihleE3wxf7ZjKzE1HU0PufKvf3ArQCcLgqgIrrETnmmuBSXZl2zEsmYN7S20CMynC_qy_CGayWIxS-nQPOyZDR7d14EIirYb4M9_dVatuu9aIfDU5WetygPdeTOnUdkmFZAS4OWZtdnpAZ_YPW80vPKxKGI0nYrl1ydz7W6x5-Zn6nYRAt8dz85XW_xM2PzNc5yN9ZlK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-xs font-headline font-bold text-primary mb-2 block uppercase tracking-widest">Asset Pipeline</span>
+<h3 class="text-2xl font-bold text-white mb-2 font-headline">APEX_WEAPONRY</h3>
+</div>
+</div>
+</div>
+<!-- Project 4: Horizontal Small -->
+<div class="md:col-span-6 group cursor-pointer bg-surface-container rounded-sm overflow-hidden border border-outline-variant/10 hover:border-secondary/30 transition-all duration-500">
+<div class="relative h-[300px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Top-down view of a dense forest environment with atmospheric lighting, ray-traced shadows, and realistic foliage density." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORBXuSyMoRlfOYelukCUkGi5XnJkUcM3TAqoNwtCT8tOsO9jOKLihlcVjKF-_GKlmR8Q7NO7tNkKuf2OYPWr-55BNPIgL4OCl5ykE1i0-UGl2MkGrB6sYW863qERmeLU1FKmgJyjUBrStE6zq4yuJE-4zkAs1zWXwPjdkFbo9lGkfcJumPwa922tsB2Sgkso2BPgUAcnTEmnPFblL_x7BjLvd0PmkCjy7sHniTF4Wq3EGPhHl1cSAW7nrFJMCklJLIWYYOrNucEn5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-xs font-headline font-bold text-secondary mb-2 block uppercase tracking-widest">Procedural World</span>
+<h3 class="text-2xl font-bold text-white mb-2 font-headline">ECHO_VALLEY</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About & Skills Section -->
+<section class="py-32 px-8 md:px-24 border-t border-white/5" id="about">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+<img class="w-full aspect-square object-cover rounded-sm border-l-4 border-primary" data-alt="Profile portrait of a man in his late 20s with a sharp, professional look, wearing a black tech-wear hoodie, in a dark studio setting with soft green side-lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX86Rz0ZAjd7gvjVIVMdmTP5KKSTb5sxbpAGSH1x8915q0FeN3sC3gXoeASX845V92ZkEoHTgp2RKbO8HXrYE3iSBIuRwm0aQh2NS5xZzxnKos7OnYUde0BZQpXgy80fp7AiD4M0W_91RbPm-g8Mo04VeWbDLYwwdnNP_nsAByR-L8QhKibghVUGIfK94aNtQQh-Q-WXKXkZu2ScDaIH3jfGQdog6-ZtsrpHTl8y-k1sKAckIUFtEd88KXEyX4z8KmaRhcXpXQUZm7"/>
+<div class="mt-8 flex gap-8">
+<div>
+<div class="text-3xl font-headline font-bold text-white">08+</div>
+<div class="text-xs font-headline text-on-surface-variant uppercase tracking-widest">Years Active</div>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-white">24</div>
+<div class="text-xs font-headline text-on-surface-variant uppercase tracking-widest">Shipped Projects</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline text-4xl font-bold mb-8">THE_ARCHITECT</h2>
+<p class="text-lg text-on-surface-variant mb-12 leading-relaxed">
+                        I specialize in creating high-fidelity environments and systems that bridge the gap between technical constraints and artistic vision. My approach combines rigorous C++ architecture with a deep understanding of PBR workflows and real-time lighting.
+                    </p>
+<div class="space-y-8">
+<div>
+<h4 class="font-headline text-xs font-bold text-primary mb-4 uppercase tracking-[0.2em]">Core Capabilities</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high p-4 border-l border-primary/40">
+<div class="font-headline text-sm font-bold text-white">ENGINEERING</div>
+<div class="text-xs text-on-surface-variant mt-1">C++, C#, Shader Lab</div>
+</div>
+<div class="bg-surface-container-high p-4 border-l border-secondary/40">
+<div class="font-headline text-sm font-bold text-white">ENGINES</div>
+<div class="text-xs text-on-surface-variant mt-1">Unreal 5, Unity 3D</div>
+</div>
+<div class="bg-surface-container-high p-4 border-l border-primary/40">
+<div class="font-headline text-sm font-bold text-white">ART PIPELINE</div>
+<div class="text-xs text-on-surface-variant mt-1">Substance, Maya, ZBrush</div>
+</div>
+<div class="bg-surface-container-high p-4 border-l border-secondary/40">
+<div class="font-headline text-sm font-bold text-white">NETWORKING</div>
+<div class="text-xs text-on-surface-variant mt-1">Photon, Mirror, AWS</div>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-headline text-xs font-bold text-secondary mb-4 uppercase tracking-[0.2em]">Experience_History</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+<span class="text-white font-medium">Lead Systems Dev @ Neon Labs</span>
+<span class="text-on-surface-variant text-sm font-headline">2021—PRESENT</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+<span class="text-white font-medium">Technical Artist @ Void Reality</span>
+<span class="text-on-surface-variant text-sm font-headline">2018—2021</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA Section -->
+<section class="py-32 px-8" id="contact">
+<div class="max-w-4xl mx-auto bg-surface-container-high rounded-sm p-12 relative overflow-hidden text-center">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-5xl font-bold mb-6">READY_FOR_DEPLOYMENT?</h2>
+<p class="text-on-surface-variant text-xl mb-10">Available for high-stakes projects, consultancy, and technical direction.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<a class="bg-primary text-on-primary px-10 py-5 font-headline font-extrabold uppercase tracking-widest text-sm hover:scale-105 transition-transform" href="mailto:hello@hamza.dev">
+                            INITIALIZE_CHAT
+                        </a>
+<div class="flex items-center justify-center gap-6 md:ml-8">
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">code</span>
+</a>
+<a class="text-on-surface-variant hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">gamepad</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0f] w-full border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 gap-6 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px]">
+<div class="text-gray-500">© 2024 HAMZA - BUILT FOR THE NEON MONOLITH</div>
+<div class="flex gap-8">
+<a class="text-gray-500 hover:text-[#a1ffc2] transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-gray-500 hover:text-[#a1ffc2] transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-gray-500 hover:text-[#a1ffc2] transition-colors opacity-80 hover:opacity-100" href="#">ArtStation</a>
+<a class="text-gray-500 hover:text-[#a1ffc2] transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+</div>
+<div class="text-gray-500 flex items-center gap-2">
+<span class="w-1 h-1 bg-[#a1ffc2] rounded-full"></span>
+                SYSTEM_STATUS: ONLINE
+            </div>
+</div>
+</footer>
+</body></html>
