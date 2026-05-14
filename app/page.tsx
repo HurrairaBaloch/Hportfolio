@@ -371,12 +371,6 @@ export default function Home() {
               From indie prototypes to commercial releases, I&apos;ve shipped projects across mobile, PC, and VR. I love pushing Unity&apos;s rendering pipeline to its limits with custom shaders and VFX Graph.
             </p>
             <div style={{ display:"flex", gap:48, marginBottom:56 }}>
-              {[{val:"5+",label:"Years in Unity"},{val:"20+",label:"Projects Shipped"},{val:"3",label:"Platforms"}].map(s => (
-                <div key={s.label}>
-                  <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:36, fontWeight:800, color:"#fff", lineHeight:1 }}>{s.val}</div>
-                  <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:10, color:"#444", textTransform:"uppercase", letterSpacing:"0.15em", marginTop:6 }}>{s.label}</div>
-                </div>
-              ))}
             </div>
             <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:10, fontWeight:700, color:"#00cffc", textTransform:"uppercase", letterSpacing:"0.25em", marginBottom:20 }}>Experience</div>
             {[{role:"Unity Developer",company:"Freelance",period:"2022 — Present"},{role:"Game Dev Intern",company:"Indie Studio",period:"2020 — 2022"}].map(e => (
@@ -385,7 +379,6 @@ export default function Home() {
                   <div style={{ fontSize:15, color:"#ddd", fontWeight:500 }}>{e.role}</div>
                   <div style={{ fontSize:12, color:"#444", marginTop:2 }}>{e.company}</div>
                 </div>
-                <span style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:12, color:"#444" }}>{e.period}</span>
               </div>
             ))}
           </div>
